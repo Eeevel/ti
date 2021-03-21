@@ -32,6 +32,8 @@ namespace laba1
             this.LbRailFenceEncrypt = new System.Windows.Forms.Label();
             this.BtnRailFenceEncrypt = new System.Windows.Forms.Button();
             this.BtnRailFenceDecrypt = new System.Windows.Forms.Button();
+            this.BtnColumnEncrypt = new System.Windows.Forms.Button();
+            this.BtnColumnDecrypt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbRailFenceEncrypt
@@ -63,11 +65,32 @@ namespace laba1
             this.BtnRailFenceDecrypt.UseVisualStyleBackColor = true;
             this.BtnRailFenceDecrypt.Click += new System.EventHandler(this.BtnRailFenceDecrypt_Click);
             // 
+            // BtnColumnEncrypt
+            // 
+            this.BtnColumnEncrypt.Location = new System.Drawing.Point(154, 48);
+            this.BtnColumnEncrypt.Name = "BtnColumnEncrypt";
+            this.BtnColumnEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.BtnColumnEncrypt.TabIndex = 3;
+            this.BtnColumnEncrypt.Text = "button1";
+            this.BtnColumnEncrypt.UseVisualStyleBackColor = true;
+            this.BtnColumnEncrypt.Click += new System.EventHandler(this.BtnColumnEncrypt_Click);
+            // 
+            // BtnColumnDecrypt
+            // 
+            this.BtnColumnDecrypt.Location = new System.Drawing.Point(154, 78);
+            this.BtnColumnDecrypt.Name = "BtnColumnDecrypt";
+            this.BtnColumnDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.BtnColumnDecrypt.TabIndex = 4;
+            this.BtnColumnDecrypt.Text = "button2";
+            this.BtnColumnDecrypt.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnColumnDecrypt);
+            this.Controls.Add(this.BtnColumnEncrypt);
             this.Controls.Add(this.BtnRailFenceDecrypt);
             this.Controls.Add(this.BtnRailFenceEncrypt);
             this.Controls.Add(this.LbRailFenceEncrypt);
@@ -83,6 +106,8 @@ namespace laba1
         private System.Windows.Forms.Label LbRailFenceEncrypt;
         private System.Windows.Forms.Button BtnRailFenceEncrypt;
         private System.Windows.Forms.Button BtnRailFenceDecrypt;
+        private System.Windows.Forms.Button BtnColumnEncrypt;
+        private System.Windows.Forms.Button BtnColumnDecrypt;
     }
 }
 
