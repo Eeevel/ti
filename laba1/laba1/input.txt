@@ -1,0 +1,4 @@
+изгородь "cryptography", 3
+столбцы "cryptographyr", "3-1-4-2"
+решетка "Here Is A Secret Message Write", "0204145650360032065410321"
+Цезарь "HERE IS A SECRET MESSAGE WRITE", 3

@@ -17,44 +17,34 @@ namespace laba1
             InitializeComponent();
         }
 
-        private void BtnRailFenceEncrypt_Click(object sender, EventArgs e)
+        private void BtnEncrypt_Click(object sender, EventArgs e)
         {
-            LbRailFenceEncrypt.Text = RailFence.Encrypt("cryptography", 3);
+            string text = TbText.Text;
+            string key = TbKey.Text;
+
+            if (RbRailFence.Checked)
+                TbResult.Text = RailFence.Encrypt(text, int.Parse(key));
+            if (RbGrille.Checked)
+                TbResult.Text = PivotingGrille.Encrypt(text, key);
+            if (RbColumn.Checked)
+                TbResult.Text = Column.Encrypt(text, key);
+            if (RbCaesar.Checked)
+                TbResult.Text = CaesarCipher.Encrypt(text, int.Parse(key));
         }
 
-        private void BtnRailFenceDecrypt_Click(object sender, EventArgs e)
+        private void BtnDecrypt_Click(object sender, EventArgs e)
         {
-            LbRailFenceEncrypt.Text = RailFence.Decrypt(LbRailFenceEncrypt.Text, 3);
-        }
+            string text = TbText.Text;
+            string key = TbKey.Text;
 
-        private void BtnColumnEncrypt_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = Column.Encrypt("cryptographyr", "3-1-4-2");
-        }
-
-        private void BtnColumnDecrypt_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = Column.Decrypt(LbRailFenceEncrypt.Text, "3-1-4-2");
-        }
-
-        private void BtnGrilleEncrypt_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = PivotingGrille.Encrypt("Here Is A Secret Message Write", "0204145650360032065410321");
-        }
-
-        private void BtnGrilleDecrypt_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = PivotingGrille.Decrypt(LbRailFenceEncrypt.Text, "0204145650360032065410321");
-        }
-
-        private void BtnCaesarEncryp_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = CaesarCipher.Encrypt("HERE IS A SECRET MESSAGE WRITE", 3);
-        }
-
-        private void BtnCaesarDecrypt_Click(object sender, EventArgs e)
-        {
-            LbRailFenceEncrypt.Text = CaesarCipher.Decrypt(LbRailFenceEncrypt.Text, 3);
+            if (RbRailFence.Checked)
+                TbResult.Text = RailFence.Decrypt(text, int.Parse(key));
+            if (RbGrille.Checked)
+                TbResult.Text = PivotingGrille.Decrypt(text, key);
+            if (RbColumn.Checked)
+                TbResult.Text = Column.Decrypt(text, key);
+            if (RbCaesar.Checked)
+                TbResult.Text = CaesarCipher.Decrypt(text, int.Parse(key));
         }
     }
 }

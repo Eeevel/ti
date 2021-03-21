@@ -29,138 +29,167 @@ namespace laba1
         /// </summary>
         private void InitializeComponent()
         {
-            this.LbRailFenceEncrypt = new System.Windows.Forms.Label();
-            this.BtnRailFenceEncrypt = new System.Windows.Forms.Button();
-            this.BtnRailFenceDecrypt = new System.Windows.Forms.Button();
-            this.BtnColumnEncrypt = new System.Windows.Forms.Button();
-            this.BtnColumnDecrypt = new System.Windows.Forms.Button();
-            this.BtnGrilleEncrypt = new System.Windows.Forms.Button();
-            this.BtnGrilleDecrypt = new System.Windows.Forms.Button();
-            this.BtnCaesarEncryp = new System.Windows.Forms.Button();
-            this.BtnCaesarDecrypt = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TbText = new System.Windows.Forms.TextBox();
+            this.TbKey = new System.Windows.Forms.TextBox();
+            this.RbRailFence = new System.Windows.Forms.RadioButton();
+            this.RbColumn = new System.Windows.Forms.RadioButton();
+            this.RbGrille = new System.Windows.Forms.RadioButton();
+            this.RbCaesar = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TbResult = new System.Windows.Forms.TextBox();
+            this.BtnEncrypt = new System.Windows.Forms.Button();
+            this.BtnDecrypt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // LbRailFenceEncrypt
+            // label1
             // 
-            this.LbRailFenceEncrypt.AutoSize = true;
-            this.LbRailFenceEncrypt.Location = new System.Drawing.Point(23, 13);
-            this.LbRailFenceEncrypt.Name = "LbRailFenceEncrypt";
-            this.LbRailFenceEncrypt.Size = new System.Drawing.Size(35, 13);
-            this.LbRailFenceEncrypt.TabIndex = 0;
-            this.LbRailFenceEncrypt.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Текст";
             // 
-            // BtnRailFenceEncrypt
+            // label2
             // 
-            this.BtnRailFenceEncrypt.Location = new System.Drawing.Point(26, 49);
-            this.BtnRailFenceEncrypt.Name = "BtnRailFenceEncrypt";
-            this.BtnRailFenceEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnRailFenceEncrypt.TabIndex = 1;
-            this.BtnRailFenceEncrypt.Text = "button1";
-            this.BtnRailFenceEncrypt.UseVisualStyleBackColor = true;
-            this.BtnRailFenceEncrypt.Click += new System.EventHandler(this.BtnRailFenceEncrypt_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Ключ";
             // 
-            // BtnRailFenceDecrypt
+            // TbText
             // 
-            this.BtnRailFenceDecrypt.Location = new System.Drawing.Point(26, 79);
-            this.BtnRailFenceDecrypt.Name = "BtnRailFenceDecrypt";
-            this.BtnRailFenceDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnRailFenceDecrypt.TabIndex = 2;
-            this.BtnRailFenceDecrypt.Text = "button1";
-            this.BtnRailFenceDecrypt.UseVisualStyleBackColor = true;
-            this.BtnRailFenceDecrypt.Click += new System.EventHandler(this.BtnRailFenceDecrypt_Click);
+            this.TbText.Location = new System.Drawing.Point(79, 6);
+            this.TbText.Name = "TbText";
+            this.TbText.Size = new System.Drawing.Size(271, 20);
+            this.TbText.TabIndex = 11;
             // 
-            // BtnColumnEncrypt
+            // TbKey
             // 
-            this.BtnColumnEncrypt.Location = new System.Drawing.Point(154, 48);
-            this.BtnColumnEncrypt.Name = "BtnColumnEncrypt";
-            this.BtnColumnEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnColumnEncrypt.TabIndex = 3;
-            this.BtnColumnEncrypt.Text = "button1";
-            this.BtnColumnEncrypt.UseVisualStyleBackColor = true;
-            this.BtnColumnEncrypt.Click += new System.EventHandler(this.BtnColumnEncrypt_Click);
+            this.TbKey.Location = new System.Drawing.Point(79, 34);
+            this.TbKey.Name = "TbKey";
+            this.TbKey.Size = new System.Drawing.Size(271, 20);
+            this.TbKey.TabIndex = 12;
             // 
-            // BtnColumnDecrypt
+            // RbRailFence
             // 
-            this.BtnColumnDecrypt.Location = new System.Drawing.Point(154, 78);
-            this.BtnColumnDecrypt.Name = "BtnColumnDecrypt";
-            this.BtnColumnDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnColumnDecrypt.TabIndex = 4;
-            this.BtnColumnDecrypt.Text = "button2";
-            this.BtnColumnDecrypt.UseVisualStyleBackColor = true;
-            this.BtnColumnDecrypt.Click += new System.EventHandler(this.BtnColumnDecrypt_Click);
+            this.RbRailFence.AutoSize = true;
+            this.RbRailFence.Checked = true;
+            this.RbRailFence.Location = new System.Drawing.Point(15, 100);
+            this.RbRailFence.Name = "RbRailFence";
+            this.RbRailFence.Size = new System.Drawing.Size(172, 17);
+            this.RbRailFence.TabIndex = 13;
+            this.RbRailFence.TabStop = true;
+            this.RbRailFence.Text = "Железнодорожная изгородь";
+            this.RbRailFence.UseVisualStyleBackColor = true;
             // 
-            // BtnGrilleEncrypt
+            // RbColumn
             // 
-            this.BtnGrilleEncrypt.Location = new System.Drawing.Point(275, 49);
-            this.BtnGrilleEncrypt.Name = "BtnGrilleEncrypt";
-            this.BtnGrilleEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnGrilleEncrypt.TabIndex = 5;
-            this.BtnGrilleEncrypt.Text = "button1";
-            this.BtnGrilleEncrypt.UseVisualStyleBackColor = true;
-            this.BtnGrilleEncrypt.Click += new System.EventHandler(this.BtnGrilleEncrypt_Click);
+            this.RbColumn.AutoSize = true;
+            this.RbColumn.Location = new System.Drawing.Point(15, 123);
+            this.RbColumn.Name = "RbColumn";
+            this.RbColumn.Size = new System.Drawing.Size(121, 17);
+            this.RbColumn.TabIndex = 14;
+            this.RbColumn.Text = "Столбцовый метод";
+            this.RbColumn.UseVisualStyleBackColor = true;
             // 
-            // BtnGrilleDecrypt
+            // RbGrille
             // 
-            this.BtnGrilleDecrypt.Location = new System.Drawing.Point(275, 78);
-            this.BtnGrilleDecrypt.Name = "BtnGrilleDecrypt";
-            this.BtnGrilleDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnGrilleDecrypt.TabIndex = 6;
-            this.BtnGrilleDecrypt.Text = "button2";
-            this.BtnGrilleDecrypt.UseVisualStyleBackColor = true;
-            this.BtnGrilleDecrypt.Click += new System.EventHandler(this.BtnGrilleDecrypt_Click);
+            this.RbGrille.AutoSize = true;
+            this.RbGrille.Location = new System.Drawing.Point(15, 146);
+            this.RbGrille.Name = "RbGrille";
+            this.RbGrille.Size = new System.Drawing.Size(206, 17);
+            this.RbGrille.TabIndex = 15;
+            this.RbGrille.Text = "Метод поворачивающейся решетки";
+            this.RbGrille.UseVisualStyleBackColor = true;
             // 
-            // BtnCaesarEncryp
+            // RbCaesar
             // 
-            this.BtnCaesarEncryp.Location = new System.Drawing.Point(396, 47);
-            this.BtnCaesarEncryp.Name = "BtnCaesarEncryp";
-            this.BtnCaesarEncryp.Size = new System.Drawing.Size(75, 23);
-            this.BtnCaesarEncryp.TabIndex = 7;
-            this.BtnCaesarEncryp.Text = "button1";
-            this.BtnCaesarEncryp.UseVisualStyleBackColor = true;
-            this.BtnCaesarEncryp.Click += new System.EventHandler(this.BtnCaesarEncryp_Click);
+            this.RbCaesar.AutoSize = true;
+            this.RbCaesar.Location = new System.Drawing.Point(15, 169);
+            this.RbCaesar.Name = "RbCaesar";
+            this.RbCaesar.Size = new System.Drawing.Size(95, 17);
+            this.RbCaesar.TabIndex = 16;
+            this.RbCaesar.Text = "Шифр Цезаря";
+            this.RbCaesar.UseVisualStyleBackColor = true;
             // 
-            // BtnCaesarDecrypt
+            // label3
             // 
-            this.BtnCaesarDecrypt.Location = new System.Drawing.Point(396, 77);
-            this.BtnCaesarDecrypt.Name = "BtnCaesarDecrypt";
-            this.BtnCaesarDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.BtnCaesarDecrypt.TabIndex = 8;
-            this.BtnCaesarDecrypt.Text = "button2";
-            this.BtnCaesarDecrypt.UseVisualStyleBackColor = true;
-            this.BtnCaesarDecrypt.Click += new System.EventHandler(this.BtnCaesarDecrypt_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Результат";
+            // 
+            // TbResult
+            // 
+            this.TbResult.Location = new System.Drawing.Point(79, 64);
+            this.TbResult.Name = "TbResult";
+            this.TbResult.Size = new System.Drawing.Size(271, 20);
+            this.TbResult.TabIndex = 18;
+            // 
+            // BtnEncrypt
+            // 
+            this.BtnEncrypt.Location = new System.Drawing.Point(15, 192);
+            this.BtnEncrypt.Name = "BtnEncrypt";
+            this.BtnEncrypt.Size = new System.Drawing.Size(154, 23);
+            this.BtnEncrypt.TabIndex = 19;
+            this.BtnEncrypt.Text = "Зашифровать";
+            this.BtnEncrypt.UseVisualStyleBackColor = true;
+            this.BtnEncrypt.Click += new System.EventHandler(this.BtnEncrypt_Click);
+            // 
+            // BtnDecrypt
+            // 
+            this.BtnDecrypt.Location = new System.Drawing.Point(196, 192);
+            this.BtnDecrypt.Name = "BtnDecrypt";
+            this.BtnDecrypt.Size = new System.Drawing.Size(154, 23);
+            this.BtnDecrypt.TabIndex = 20;
+            this.BtnDecrypt.Text = "Расшифровать";
+            this.BtnDecrypt.UseVisualStyleBackColor = true;
+            this.BtnDecrypt.Click += new System.EventHandler(this.BtnDecrypt_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnCaesarDecrypt);
-            this.Controls.Add(this.BtnCaesarEncryp);
-            this.Controls.Add(this.BtnGrilleDecrypt);
-            this.Controls.Add(this.BtnGrilleEncrypt);
-            this.Controls.Add(this.BtnColumnDecrypt);
-            this.Controls.Add(this.BtnColumnEncrypt);
-            this.Controls.Add(this.BtnRailFenceDecrypt);
-            this.Controls.Add(this.BtnRailFenceEncrypt);
-            this.Controls.Add(this.LbRailFenceEncrypt);
+            this.ClientSize = new System.Drawing.Size(361, 227);
+            this.Controls.Add(this.BtnDecrypt);
+            this.Controls.Add(this.BtnEncrypt);
+            this.Controls.Add(this.TbResult);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.RbCaesar);
+            this.Controls.Add(this.RbGrille);
+            this.Controls.Add(this.RbColumn);
+            this.Controls.Add(this.RbRailFence);
+            this.Controls.Add(this.TbKey);
+            this.Controls.Add(this.TbText);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Шифрование";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LbRailFenceEncrypt;
-        private System.Windows.Forms.Button BtnRailFenceEncrypt;
-        private System.Windows.Forms.Button BtnRailFenceDecrypt;
-        private System.Windows.Forms.Button BtnColumnEncrypt;
-        private System.Windows.Forms.Button BtnColumnDecrypt;
-        private System.Windows.Forms.Button BtnGrilleEncrypt;
-        private System.Windows.Forms.Button BtnGrilleDecrypt;
-        private System.Windows.Forms.Button BtnCaesarEncryp;
-        private System.Windows.Forms.Button BtnCaesarDecrypt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TbText;
+        private System.Windows.Forms.TextBox TbKey;
+        private System.Windows.Forms.RadioButton RbRailFence;
+        private System.Windows.Forms.RadioButton RbColumn;
+        private System.Windows.Forms.RadioButton RbGrille;
+        private System.Windows.Forms.RadioButton RbCaesar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TbResult;
+        private System.Windows.Forms.Button BtnEncrypt;
+        private System.Windows.Forms.Button BtnDecrypt;
     }
 }
 
