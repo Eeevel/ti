@@ -16,5 +16,15 @@ namespace laba1
         {
             InitializeComponent();
         }
+
+        private void BtnRailFenceEncrypt_Click(object sender, EventArgs e)
+        {
+            LbRailFenceEncrypt.Text = RailFence.Encrypt("cryptography", 3);
+        }
+
+        private void BtnRailFenceDecrypt_Click(object sender, EventArgs e)
+        {
+            LbRailFenceEncrypt.Text = RailFence.Decrypt(LbRailFenceEncrypt.Text, 3);
+        }
     }
 }
