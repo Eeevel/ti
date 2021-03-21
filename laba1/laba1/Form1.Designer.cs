@@ -34,6 +34,8 @@ namespace laba1
             this.BtnRailFenceDecrypt = new System.Windows.Forms.Button();
             this.BtnColumnEncrypt = new System.Windows.Forms.Button();
             this.BtnColumnDecrypt = new System.Windows.Forms.Button();
+            this.BtnGrilleEncrypt = new System.Windows.Forms.Button();
+            this.BtnGrilleDecrypt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbRailFenceEncrypt
@@ -85,11 +87,33 @@ namespace laba1
             this.BtnColumnDecrypt.UseVisualStyleBackColor = true;
             this.BtnColumnDecrypt.Click += new System.EventHandler(this.BtnColumnDecrypt_Click);
             // 
+            // BtnGrilleEncrypt
+            // 
+            this.BtnGrilleEncrypt.Location = new System.Drawing.Point(275, 49);
+            this.BtnGrilleEncrypt.Name = "BtnGrilleEncrypt";
+            this.BtnGrilleEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.BtnGrilleEncrypt.TabIndex = 5;
+            this.BtnGrilleEncrypt.Text = "button1";
+            this.BtnGrilleEncrypt.UseVisualStyleBackColor = true;
+            this.BtnGrilleEncrypt.Click += new System.EventHandler(this.BtnGrilleEncrypt_Click);
+            // 
+            // BtnGrilleDecrypt
+            // 
+            this.BtnGrilleDecrypt.Location = new System.Drawing.Point(275, 78);
+            this.BtnGrilleDecrypt.Name = "BtnGrilleDecrypt";
+            this.BtnGrilleDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.BtnGrilleDecrypt.TabIndex = 6;
+            this.BtnGrilleDecrypt.Text = "button2";
+            this.BtnGrilleDecrypt.UseVisualStyleBackColor = true;
+            this.BtnGrilleDecrypt.Click += new System.EventHandler(this.BtnGrilleDecrypt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnGrilleDecrypt);
+            this.Controls.Add(this.BtnGrilleEncrypt);
             this.Controls.Add(this.BtnColumnDecrypt);
             this.Controls.Add(this.BtnColumnEncrypt);
             this.Controls.Add(this.BtnRailFenceDecrypt);
@@ -109,6 +133,8 @@ namespace laba1
         private System.Windows.Forms.Button BtnRailFenceDecrypt;
         private System.Windows.Forms.Button BtnColumnEncrypt;
         private System.Windows.Forms.Button BtnColumnDecrypt;
+        private System.Windows.Forms.Button BtnGrilleEncrypt;
+        private System.Windows.Forms.Button BtnGrilleDecrypt;
     }
 }
 
