@@ -63,6 +63,50 @@ namespace laba1
             return cipherText;
         }
 
-        //public static string Decrypt(string cipherText, int key)
+        public static string Decrypt(string cipherText, string key)
+        {
+            char[] delimiterChars = { ' ', ',', '.', ':', '-' };
+            string[] sNumbers = key.Split(delimiterChars);
+            int[] numbers;
+            try
+            {
+                numbers = Array.ConvertAll(sNumbers, int.Parse);
+            }
+            catch
+            {
+                cipherText = "Неверный ключ";
+                return cipherText;
+            }
+
+            int columnCount = numbers.Length;
+            int rowsCount = (int)Math.Ceiling((double)cipherText.Length / columnCount);
+            char[,] matrix = new char[rowsCount, columnCount];
+
+            // Заполняем лишние ячейки
+            int freeCells = columnCount * rowsCount - cipherText.Length;
+            for (int i = freeCells; i > 0; i--)
+                matrix[rowsCount - 1, columnCount - i] = '\r';
+
+            // Запись столбцов по ключу
+            int column;
+            int index = 0;
+            int indexText = 0;
+            for (int i = 0; i < columnCount; i++)
+            {
+                column = numbers[index++] - 1;
+                for (int j = 0; j < rowsCount; j++)
+                    if(matrix[j, column] != '\r')
+                        matrix[j, column] = cipherText[indexText++];
+            }
+
+            // Получение текста из матрицы
+            string plainText = "";
+            for (int i = 0; i < rowsCount; i++)
+                for (int j = 0; j < columnCount; j++)
+                    if (matrix[i, j] != '\r')
+                        plainText += matrix[i, j];
+
+            return plainText;
+        }
     }
 }

@@ -83,6 +83,7 @@ namespace laba1
             this.BtnColumnDecrypt.TabIndex = 4;
             this.BtnColumnDecrypt.Text = "button2";
             this.BtnColumnDecrypt.UseVisualStyleBackColor = true;
+            this.BtnColumnDecrypt.Click += new System.EventHandler(this.BtnColumnDecrypt_Click);
             // 
             // Form1
             // 

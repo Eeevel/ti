@@ -31,5 +31,10 @@ namespace laba1
         {
             LbRailFenceEncrypt.Text = Column.Encrypt("cryptographyr", "3-1-4-2");
         }
+
+        private void BtnColumnDecrypt_Click(object sender, EventArgs e)
+        {
+            LbRailFenceEncrypt.Text = Column.Decrypt(LbRailFenceEncrypt.Text, "3-1-4-2");
+        }
     }
 }
