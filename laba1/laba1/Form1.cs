@@ -46,5 +46,15 @@ namespace laba1
         {
             LbRailFenceEncrypt.Text = PivotingGrille.Decrypt(LbRailFenceEncrypt.Text, "0204145650360032065410321");
         }
+
+        private void BtnCaesarEncryp_Click(object sender, EventArgs e)
+        {
+            LbRailFenceEncrypt.Text = CaesarCipher.Encrypt("HERE IS A SECRET MESSAGE WRITE", 3);
+        }
+
+        private void BtnCaesarDecrypt_Click(object sender, EventArgs e)
+        {
+            LbRailFenceEncrypt.Text = CaesarCipher.Decrypt(LbRailFenceEncrypt.Text, 3);
+        }
     }
 }

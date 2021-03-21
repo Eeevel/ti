@@ -36,6 +36,8 @@ namespace laba1
             this.BtnColumnDecrypt = new System.Windows.Forms.Button();
             this.BtnGrilleEncrypt = new System.Windows.Forms.Button();
             this.BtnGrilleDecrypt = new System.Windows.Forms.Button();
+            this.BtnCaesarEncryp = new System.Windows.Forms.Button();
+            this.BtnCaesarDecrypt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbRailFenceEncrypt
@@ -107,11 +109,33 @@ namespace laba1
             this.BtnGrilleDecrypt.UseVisualStyleBackColor = true;
             this.BtnGrilleDecrypt.Click += new System.EventHandler(this.BtnGrilleDecrypt_Click);
             // 
+            // BtnCaesarEncryp
+            // 
+            this.BtnCaesarEncryp.Location = new System.Drawing.Point(396, 47);
+            this.BtnCaesarEncryp.Name = "BtnCaesarEncryp";
+            this.BtnCaesarEncryp.Size = new System.Drawing.Size(75, 23);
+            this.BtnCaesarEncryp.TabIndex = 7;
+            this.BtnCaesarEncryp.Text = "button1";
+            this.BtnCaesarEncryp.UseVisualStyleBackColor = true;
+            this.BtnCaesarEncryp.Click += new System.EventHandler(this.BtnCaesarEncryp_Click);
+            // 
+            // BtnCaesarDecrypt
+            // 
+            this.BtnCaesarDecrypt.Location = new System.Drawing.Point(396, 77);
+            this.BtnCaesarDecrypt.Name = "BtnCaesarDecrypt";
+            this.BtnCaesarDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.BtnCaesarDecrypt.TabIndex = 8;
+            this.BtnCaesarDecrypt.Text = "button2";
+            this.BtnCaesarDecrypt.UseVisualStyleBackColor = true;
+            this.BtnCaesarDecrypt.Click += new System.EventHandler(this.BtnCaesarDecrypt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnCaesarDecrypt);
+            this.Controls.Add(this.BtnCaesarEncryp);
             this.Controls.Add(this.BtnGrilleDecrypt);
             this.Controls.Add(this.BtnGrilleEncrypt);
             this.Controls.Add(this.BtnColumnDecrypt);
@@ -135,6 +159,8 @@ namespace laba1
         private System.Windows.Forms.Button BtnColumnDecrypt;
         private System.Windows.Forms.Button BtnGrilleEncrypt;
         private System.Windows.Forms.Button BtnGrilleDecrypt;
+        private System.Windows.Forms.Button BtnCaesarEncryp;
+        private System.Windows.Forms.Button BtnCaesarDecrypt;
     }
 }
 
