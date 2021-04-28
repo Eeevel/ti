@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
-namespace laba2
+namespace laba3
 {
     class RSA
     {
@@ -31,7 +31,7 @@ namespace laba2
 
             for (int i = 0; i < arrChiperText.Length; i++)
             {
-                var value = BigInteger.Parse(arrChiperText[i]);
+                var value = BigInteger.Parse(arrChiperText[i]); ;
                 var number = FastExponentiation(value, d, n);
                 plainText += (char)number;
             }
@@ -86,8 +86,8 @@ namespace laba2
 
             while (true)
             {
-                if ((PrimeNumber.IsPrimeNumber(e)) && 
-                    (e < functionEuler) && 
+                if ((PrimeNumber.IsPrimeNumber(e)) &&
+                    (e < functionEuler) &&
                     (BigInteger.GreatestCommonDivisor(new BigInteger(e), new BigInteger(functionEuler)) == BigInteger.One))
                 {
                     break;
