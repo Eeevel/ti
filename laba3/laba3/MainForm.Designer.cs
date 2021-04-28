@@ -29,8 +29,6 @@ namespace laba3
         /// </summary>
         private void InitializeComponent()
         {
-            this.rBtnAuto = new System.Windows.Forms.RadioButton();
-            this.rBtnUser = new System.Windows.Forms.RadioButton();
             this.textBoxText = new System.Windows.Forms.TextBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,32 +43,13 @@ namespace laba3
             this.textBoxE = new System.Windows.Forms.TextBox();
             this.textBoxD = new System.Windows.Forms.TextBox();
             this.textBoxN = new System.Windows.Forms.TextBox();
-            this.btnEncrypt = new System.Windows.Forms.Button();
-            this.btnDecrypt = new System.Windows.Forms.Button();
-            this.lbError = new System.Windows.Forms.Label();
+            this.BtnGenerate = new System.Windows.Forms.Button();
+            this.BtnCheck = new System.Windows.Forms.Button();
+            this.textBoxSignature = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxHash = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // rBtnAuto
-            // 
-            this.rBtnAuto.AutoSize = true;
-            this.rBtnAuto.Checked = true;
-            this.rBtnAuto.Location = new System.Drawing.Point(15, 41);
-            this.rBtnAuto.Name = "rBtnAuto";
-            this.rBtnAuto.Size = new System.Drawing.Size(199, 17);
-            this.rBtnAuto.TabIndex = 7;
-            this.rBtnAuto.TabStop = true;
-            this.rBtnAuto.Text = "Автоматическая генерация ключа";
-            this.rBtnAuto.UseVisualStyleBackColor = true;
-            // 
-            // rBtnUser
-            // 
-            this.rBtnUser.AutoSize = true;
-            this.rBtnUser.Location = new System.Drawing.Point(15, 64);
-            this.rBtnUser.Name = "rBtnUser";
-            this.rBtnUser.Size = new System.Drawing.Size(183, 17);
-            this.rBtnUser.TabIndex = 8;
-            this.rBtnUser.Text = "Пользовательский ввод ключа";
-            this.rBtnUser.UseVisualStyleBackColor = true;
             // 
             // textBoxText
             // 
@@ -81,9 +60,10 @@ namespace laba3
             // 
             // textBoxResult
             // 
-            this.textBoxResult.Location = new System.Drawing.Point(77, 140);
+            this.textBoxResult.Location = new System.Drawing.Point(77, 120);
+            this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.Size = new System.Drawing.Size(521, 20);
+            this.textBoxResult.Size = new System.Drawing.Size(521, 50);
             this.textBoxResult.TabIndex = 10;
             // 
             // label7
@@ -98,7 +78,7 @@ namespace laba3
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 143);
+            this.label8.Location = new System.Drawing.Point(12, 123);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 12;
@@ -107,7 +87,7 @@ namespace laba3
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 90);
+            this.label9.Location = new System.Drawing.Point(12, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(13, 13);
             this.label9.TabIndex = 13;
@@ -116,7 +96,7 @@ namespace laba3
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 117);
+            this.label10.Location = new System.Drawing.Point(12, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 14;
@@ -125,7 +105,7 @@ namespace laba3
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(235, 90);
+            this.label11.Location = new System.Drawing.Point(235, 44);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 15;
@@ -134,7 +114,7 @@ namespace laba3
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(235, 117);
+            this.label12.Location = new System.Drawing.Point(235, 71);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(13, 13);
             this.label12.TabIndex = 16;
@@ -143,7 +123,7 @@ namespace laba3
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(435, 90);
+            this.label13.Location = new System.Drawing.Point(435, 44);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(13, 13);
             this.label13.TabIndex = 17;
@@ -151,75 +131,108 @@ namespace laba3
             // 
             // textBoxP
             // 
-            this.textBoxP.Location = new System.Drawing.Point(31, 87);
+            this.textBoxP.Enabled = false;
+            this.textBoxP.Location = new System.Drawing.Point(31, 41);
             this.textBoxP.Name = "textBoxP";
             this.textBoxP.Size = new System.Drawing.Size(144, 20);
             this.textBoxP.TabIndex = 19;
             // 
             // textBoxQ
             // 
-            this.textBoxQ.Location = new System.Drawing.Point(31, 114);
+            this.textBoxQ.Enabled = false;
+            this.textBoxQ.Location = new System.Drawing.Point(31, 68);
             this.textBoxQ.Name = "textBoxQ";
             this.textBoxQ.Size = new System.Drawing.Size(144, 20);
             this.textBoxQ.TabIndex = 20;
             // 
             // textBoxE
             // 
-            this.textBoxE.Location = new System.Drawing.Point(254, 87);
+            this.textBoxE.Enabled = false;
+            this.textBoxE.Location = new System.Drawing.Point(254, 41);
             this.textBoxE.Name = "textBoxE";
             this.textBoxE.Size = new System.Drawing.Size(144, 20);
             this.textBoxE.TabIndex = 21;
             // 
             // textBoxD
             // 
-            this.textBoxD.Location = new System.Drawing.Point(254, 114);
+            this.textBoxD.Enabled = false;
+            this.textBoxD.Location = new System.Drawing.Point(254, 68);
             this.textBoxD.Name = "textBoxD";
             this.textBoxD.Size = new System.Drawing.Size(144, 20);
             this.textBoxD.TabIndex = 22;
             // 
             // textBoxN
             // 
-            this.textBoxN.Location = new System.Drawing.Point(454, 87);
+            this.textBoxN.Enabled = false;
+            this.textBoxN.Location = new System.Drawing.Point(454, 41);
             this.textBoxN.Name = "textBoxN";
             this.textBoxN.Size = new System.Drawing.Size(144, 20);
             this.textBoxN.TabIndex = 23;
             // 
-            // btnEncrypt
+            // BtnGenerate
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(15, 166);
-            this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(241, 23);
-            this.btnEncrypt.TabIndex = 24;
-            this.btnEncrypt.Text = "Зашифровать";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
+            this.BtnGenerate.Location = new System.Drawing.Point(15, 176);
+            this.BtnGenerate.Name = "BtnGenerate";
+            this.BtnGenerate.Size = new System.Drawing.Size(241, 23);
+            this.BtnGenerate.TabIndex = 24;
+            this.BtnGenerate.Text = "Сгенерировать ЭЦП";
+            this.BtnGenerate.UseVisualStyleBackColor = true;
+            this.BtnGenerate.Click += new System.EventHandler(this.Generate);
             // 
-            // btnDecrypt
+            // BtnCheck
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(397, 166);
-            this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(201, 23);
-            this.btnDecrypt.TabIndex = 25;
-            this.btnDecrypt.Text = "Расшифровать";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            this.BtnCheck.Location = new System.Drawing.Point(397, 176);
+            this.BtnCheck.Name = "BtnCheck";
+            this.BtnCheck.Size = new System.Drawing.Size(201, 23);
+            this.BtnCheck.TabIndex = 25;
+            this.BtnCheck.Text = "Проверить ЭЦП";
+            this.BtnCheck.UseVisualStyleBackColor = true;
+            this.BtnCheck.Click += new System.EventHandler(this.Check);
             // 
-            // lbError
+            // textBoxSignature
             // 
-            this.lbError.AutoSize = true;
-            this.lbError.Location = new System.Drawing.Point(12, 192);
-            this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(0, 13);
-            this.lbError.TabIndex = 26;
+            this.textBoxSignature.Location = new System.Drawing.Point(77, 94);
+            this.textBoxSignature.Name = "textBoxSignature";
+            this.textBoxSignature.Size = new System.Drawing.Size(521, 20);
+            this.textBoxSignature.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Подпись";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(420, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Хэш";
+            // 
+            // textBoxHash
+            // 
+            this.textBoxHash.Enabled = false;
+            this.textBoxHash.Location = new System.Drawing.Point(454, 67);
+            this.textBoxHash.Name = "textBoxHash";
+            this.textBoxHash.Size = new System.Drawing.Size(144, 20);
+            this.textBoxHash.TabIndex = 30;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 214);
-            this.Controls.Add(this.lbError);
-            this.Controls.Add(this.btnDecrypt);
-            this.Controls.Add(this.btnEncrypt);
+            this.ClientSize = new System.Drawing.Size(610, 206);
+            this.Controls.Add(this.textBoxHash);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxSignature);
+            this.Controls.Add(this.BtnCheck);
+            this.Controls.Add(this.BtnGenerate);
             this.Controls.Add(this.textBoxN);
             this.Controls.Add(this.textBoxD);
             this.Controls.Add(this.textBoxE);
@@ -234,18 +247,14 @@ namespace laba3
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.textBoxText);
-            this.Controls.Add(this.rBtnUser);
-            this.Controls.Add(this.rBtnAuto);
             this.Name = "MainForm";
-            this.Text = "RSA";
+            this.Text = "Электронная цифровая подпись";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton rBtnAuto;
-        private System.Windows.Forms.RadioButton rBtnUser;
         private System.Windows.Forms.TextBox textBoxText;
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Label label7;
@@ -260,9 +269,12 @@ namespace laba3
         private System.Windows.Forms.TextBox textBoxE;
         private System.Windows.Forms.TextBox textBoxD;
         private System.Windows.Forms.TextBox textBoxN;
-        private System.Windows.Forms.Button btnEncrypt;
-        private System.Windows.Forms.Button btnDecrypt;
-        private System.Windows.Forms.Label lbError;
+        private System.Windows.Forms.Button BtnGenerate;
+        private System.Windows.Forms.Button BtnCheck;
+        private System.Windows.Forms.TextBox textBoxSignature;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxHash;
     }
 
 }

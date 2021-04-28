@@ -125,7 +125,7 @@ namespace laba3
             return d;
         }
 
-        private static BigInteger FastExponentiation(BigInteger a, BigInteger z, BigInteger n)
+        public static BigInteger FastExponentiation(BigInteger a, BigInteger z, BigInteger n)
         {
             BigInteger a1 = a, z1 = z, x = 1;
             while (z1 != 0)
